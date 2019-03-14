@@ -26,3 +26,17 @@ ENV <key><value>
 #格式二
 ENV <key1>=<value1> <key2>=<value2>...
 ```
+
+docker ps -a 命令 查看 当前 系统 中 容器 的 列表
+docker start [容器名/容器ID] #重启已经关闭的容器
+docker attach [容器名/容器ID] #附着到容器
+docker logs -f -t #获取容器日志 -f 同tail -f, -t 加上时间戳
+docker top #查看容器内进程
+docker exec #容器内额外启动新进程
+docker run -d --restart=always --name #后台，是否重启，容器名字
+sudo docker inspect #查看容器状态
+---
+卷是在一个或多个容器中特殊指定的目录，卷会绕过联合文件系统，为持久化数据和共享数据提供几个有用的特性  
+docker run --volumes-from#把指定容器的卷加入新创建的容器中
+删除最后一个使用卷的容器，卷将被删除
+sudo docker port [容器] 端口号 #查看端口映射

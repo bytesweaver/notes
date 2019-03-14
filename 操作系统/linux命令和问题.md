@@ -23,3 +23,13 @@ SATA是Serial ATA的缩写，即串行ATA
 
 扩展分区也就是除主分区外的分区，但它不能直接使用，必须再将它划分为若干个逻辑分区才行。
 逻辑分区也就是我们平常在操作系统中所看到的D、E、F等盘。
+
+
+
+[apk 包管理命令](https://www.hi-linux.com/posts/64839.html)
+  update:从远程镜像源中更新本地镜像源索引
+  add:安装PACKAGES并自动解决依赖关系
+  del:卸载并删除PACKAGES
+  upgrade:升级当前已安装的软件包
+  search:搜索软件包
+  info:列出PACKAGES或镜像源的详细信息
