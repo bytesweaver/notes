@@ -33,3 +33,7 @@ SATA是Serial ATA的缩写，即串行ATA
   upgrade:升级当前已安装的软件包
   search:搜索软件包
   info:列出PACKAGES或镜像源的详细信息
+
+
+  awk命令
+  awk '{pattern + action}' {filenames}
