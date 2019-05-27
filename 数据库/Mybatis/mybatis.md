@@ -11,6 +11,18 @@
 	</select>
 ```
 
+collection标签可以填（'list','array','map'）
+
+item表示集合中每一个元素进行迭代时的别名；
+
+index指 定一个名字，用于表示在迭代过程中，每次迭代到的位置；
+
+open表示该语句以什么开始，
+
+separator表示在每次进行迭代之间以什么符号作为分隔符；
+
+close表示以什么结束。
+
 mybatis trim标签的使用
 　　trim 属性
 　　prefix：前缀
@@ -51,3 +63,11 @@ mybatis sql标签的使用
 	</select>
 ```
 
+## Mybatis原理
+
+参考：<https://www.cnblogs.com/luoxn28/p/6417892.html>
+
+Mybatis缓存：
+一级缓存：是SqlSession级别的缓存，用Hash表存储，同一个SqlSession两次执行同一个Sql语句触发，默认开启，
+
+二级缓存：Mapper级别缓存，跨session，默认不开启二级缓存
