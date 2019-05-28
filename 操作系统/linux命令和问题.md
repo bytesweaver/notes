@@ -37,3 +37,28 @@ SATA是Serial ATA的缩写，即串行ATA
 
   awk命令
   awk '{pattern + action}' {filenames}
+
+秘钥
+
+```
+ssh-keygen
+```
+
+linux 解压命令小结
+
+```
+unzip filename. zip.
+tar -zxvf filename. tar.gz.
+tar -Jxvf filename. tar.xz.
+tar -Zxvf filename. tar.Z.
+tar --help.
+tar -xvf filename. tar.gz tar -xvf filename.
+```
+
+日志查看命令
+
+```
+cat log.log -n #显示行号，包括空白行
+sed -n "840,900p" error.log #查看840-900行的内容
+```
+

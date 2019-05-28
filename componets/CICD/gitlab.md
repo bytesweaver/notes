@@ -29,7 +29,26 @@ git stash drop
 git stash pop stash@{0}
 git stash list
 ```
+fork的代码同步
+
+```
+#添加项目A的远程仓库地址到upstream
+git remote add upstream <你朋友项目A的仓库地址>
+
+#把项目A的更新来到本地的upstream里
+git fetch upstream
+
+#切换到你自己想要merge的分支，这里我用举例：master
+git checkout master
+
+#merge项目A的更新到你的branch
+git merge upstream/master
+```
+
+
+
 # 书籍
+
 [pro git](https://gitee.com/progit/)
 
 [pro git2](https://progit.bootcss.com/)

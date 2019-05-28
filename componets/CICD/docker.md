@@ -40,3 +40,18 @@ sudo docker inspect #查看容器状态
 docker run --volumes-from#把指定容器的卷加入新创建的容器中
 删除最后一个使用卷的容器，卷将被删除
 sudo docker port [容器] 端口号 #查看端口映射
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
