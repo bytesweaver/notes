@@ -71,3 +71,5 @@ Mybatis缓存：
 一级缓存：是SqlSession级别的缓存，用Hash表存储，同一个SqlSession两次执行同一个Sql语句触发，默认开启，
 
 二级缓存：Mapper级别缓存，跨session，默认不开启二级缓存
+
+debug日志开启（spring-boot）logging.level.com.xxx.xxx=debug

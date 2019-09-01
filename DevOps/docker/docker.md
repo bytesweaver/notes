@@ -35,6 +35,14 @@ docker container cp [containID]:[/path/to/file] . #将docker中的文件拷贝�
 docker container logs [containerID] #查看日志
 docker logs --tail 100 [containerID]
 docker run --rm #容器停止运行后，自动删除容器文件
+```
+
+简单常用命令
+
+```
+sudo docker info #查看docker信息
+sudo docker logs -f containerID #查看日志
+sudo docker exec -d daemon_ dave touch /etc/ new_ config_ file #docker exec在容器内部额外启动新进程
 
 ```
 
