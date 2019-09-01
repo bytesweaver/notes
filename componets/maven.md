@@ -14,3 +14,7 @@ mvn deploy:deploy-file -Dmaven.test.skip=true -Dfile=D:\MvnProject\service-mvn-1
 -DrepositoryId                                      //远程库服务器ID
 -Durl                                               //远程库服务器地址
 ```
+
+management    <https://www.cnblogs.com/maxiaofang/p/5944362.html>
+
+<https://www.cnblogs.com/mr-wuxiansheng/p/6189438.html>
