@@ -1,4 +1,4 @@
-** 安装下载和上传命令 **
+  ** 安装下载和上传命令 **
 1. yum安装
 yum install -y lrzsz
 
@@ -62,3 +62,6 @@ cat log.log -n #显示行号，包括空白行
 sed -n "840,900p" error.log #查看840-900行的内容
 ```
 
+远程执行shell，报命令找不到
+
+<http://feihu.me/blog/2014/env-problem-when-ssh-executing-command-on-remote/>

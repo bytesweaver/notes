@@ -28,6 +28,15 @@ git branch -d <BranchName>#删除本地分支
 git stash drop
 git stash pop stash@{0}
 git stash list
+
+
+## 恢复
+#删除暂存区和分支的文件
+git rm --cached file_path
+#将file回退到unstage区
+git reset HEAD
+#修改最后一次提交
+ git commit --amend
 ```
 fork的代码同步
 
@@ -59,3 +68,8 @@ git config --global credential.helper cache #缓存账号密码
 git config --global http.sslVerify false  #报SSl错误
 
 ```
+
+
+
+> HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支
+

@@ -12,3 +12,29 @@ FROM 子句 中的 子 查询 是 派生 表” 这一 表述 是对 的， 但�
 Spring 事务
 
 https://www.ibm.com/developerworks/cn/education/opensource/os-cn-spring-trans/index.html
+
+
+
+如何查找Mysql中查询慢的SQL语句
+
+```
+1，slow_query_log
+
+这个参数设置为ON，可以捕获执行时间超过一定数值的SQL语句。
+
+2，long_query_time
+
+当SQL语句执行时间超过此数值时，就会被记录到日志中，建议设置为1或者更短。
+
+3，slow_query_log_file
+
+记录日志的文件名。
+4，log_queries_not_using_indexes
+
+这个参数设置为ON，可以捕获到所有未使用索引的SQL语句，尽管这个SQL语句有可能执行得挺快
+```
+
+
+
+如何查找慢查询：
+
