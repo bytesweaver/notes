@@ -43,6 +43,16 @@ docker run --rm #容器停止运行后，自动删除容器文件
 sudo docker info #查看docker信息
 sudo docker logs -f containerID #查看日志
 sudo docker exec -d daemon_ dave touch /etc/ new_ config_ file #docker exec在容器内部额外启动新进程
+删除所有未运行的容器
+sudo docker rm $(sudo docker ps -a -q)
+删除所有未引用的镜像
+sudo image prune -a
+
 
 ```
 
+批量删除已停止的容器https://blog.csdn.net/CSDN_duomaomao/article/details/78587103
+
+https://note.qidong.name/2017/06/26/docker-clean/
+
+http://feihu.me/blog/2014/env-problem-when-ssh-executing-command-on-remote/

@@ -73,3 +73,7 @@ Mybatis缓存：
 二级缓存：Mapper级别缓存，跨session，默认不开启二级缓存
 
 debug日志开启（spring-boot）logging.level.com.xxx.xxx=debug
+
+https://www.ibm.com/developerworks/cn/java/j-master-spring-transactional-use/index.html
+
+https://juejin.im/post/5b00c52ef265da0b952
