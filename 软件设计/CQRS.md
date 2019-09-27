@@ -1,0 +1,1 @@
+![architecture-01.png](image\cqrs.png)
