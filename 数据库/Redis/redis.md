@@ -34,7 +34,37 @@ MULTI, EXEC, DISCARD, WATCH
 
 ## 持久化方式
 
-RDB和AOF
+### RDB和AOF
+
+#### RDB
+
+RDB:满足条件或者执行flushAll命令
+
+dump文件放到redis启动文件，会自动扫描回复数据
+
+使用场景：
+
+适合大规模数据回复
+
+对数据完整性不高
+
+缺点：
+
+需要一定的时间间隔
+
+fork子进程会占用一定的内存空间
+
+#### AOF
+
+appendonly
+
+默认不开启， 需要手动配置
+
+如果AOF文件错误， redis无法启动，redis-check-aof工具进行修复
+
+优点：每一次都修改，保证文件完整性
+
+缺点：AOF远远大于RDB， 回复速度慢， AOF运行效率比较慢	
 
 ## Redis 和 Memcache比较
 
@@ -72,3 +102,21 @@ RDB和AOF
 >
 >  3、哨兵模式是主从模式的升级，系统更健壮，可用性更高。  
 
+## spring-boot整合
+
+jedis:采用直连，多线程不安全，避免不安全，使用jedis pool连接池， BIO
+
+lettuce：采用netty，实例可以在多个线程中共享， 不存在线程不安全的情况， 可以减少线程数据
+
+### jedis 为什么是非线程安全的
+
+参考：https://www.jianshu.com/p/5e4a1f92c88f
+
+jedis类中有RedisInputStream和RedisOutputStream两个属性，而发送命令和获取返回值都是使用这两个成员变量，显然，这很容易引发多线程问题
+
+1. 共享socket引起的异常
+2. 共享数据流引起的异常
+
+
+
+> jedis本身不是多线程安全的，这并不是jedis的bug，而是jedis的设计与redis本身就是单线程相关，jedis实例抽象的是发送命令相关，一个jedis实例使用一个线程与使用100个线程去发送命令没有本质上的区别，所以没必要设置为线程安全的。但是如果需要用多线程方式访问redis服务器怎么做呢？那就使用多个jedis实例，每个线程对应一个jedis实例，而不是一个jedis实例多个线程共享。一个jedis关联一个Client，相当于一个客户端，Client继承了Connection，Connection维护了Socket连接，对于Socket这种昂贵的连接，一般都会做池化，jedis提供了JedisPool

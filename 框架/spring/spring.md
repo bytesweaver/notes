@@ -1,6 +1,9 @@
+
+
 contextConfigLocation：
 contextConfigLocation指的是Spring该去哪里读取配置文件，ContextLoaderListener用于启动的web容器（如tomcat）时，去读取配置文件并完成Spring容器的初始化（包括加载bean等）。
 关于contextConfigLocation的配置方式也是可以非常丰富的，还可以使用通配符 * ，这里简单举几个例子说明：
+
 1. classpath:resources/services.xml
 表示到web工程的classes/resources文件夹中查找配置文件。
 2. classpath*:resources/services.xml

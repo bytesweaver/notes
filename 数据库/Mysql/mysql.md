@@ -38,3 +38,6 @@ https://www.ibm.com/developerworks/cn/education/opensource/os-cn-spring-trans/in
 
 如何查找慢查询：
 
+mysql联合索引存储方式：
+
+ ![](E:\notes\notes\数据库\mysql联合索引存储方式.png) 
