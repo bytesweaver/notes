@@ -28,3 +28,27 @@ ApplicationContext-> getEnvironment->getProperties
 7. Profile:
 
    Spring 为我们提供的可以根据当前环境， 动态的激活和切换一系列组件的功能，
+
+## BeanFactory 和FactoryBean有什么区别
+
+BeanFactory:
+
+```
+The root interface for accessing a Spring bean container.This is the basic client view of a bean container;
+```
+
+FactoryBean: 
+
+```
+Interface to be implemented by objects used within a {@link BeanFactory} which are themselves factories for individual objects
+包含3个方法：
+/**
+ * 工厂Bean创建对象方法 
+ */
+T getObject() throws Exception;
+Class<?> getObjectType();
+default boolean isSingleton() {
+		return true;
+	}
+```
+

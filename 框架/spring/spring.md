@@ -19,7 +19,6 @@ contextConfigLocation指的是Spring该去哪里读取配置文件，ContextLoad
 
 2）继承体系逐步实现组件的各项功能。
 
-
 container
  A web container is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access-rights.
 

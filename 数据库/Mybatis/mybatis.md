@@ -77,3 +77,5 @@ debug日志开启（spring-boot）logging.level.com.xxx.xxx=debug
 https://www.ibm.com/developerworks/cn/java/j-master-spring-transactional-use/index.html
 
 https://juejin.im/post/5b00c52ef265da0b952
+
+https://blog.csdn.net/liuqi199707/article/details/109712299
